@@ -1,0 +1,88 @@
+.ShoppingCart {
+
+  font-family: $MyriadPro;
+  font-size: 1rem;
+  text-align: center;
+  text-align: center;
+  margin: 0 auto;
+
+  h3 {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin: 30px auto 0;
+  }
+
+  h4 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  hr {
+    height: 1px;
+    background: $dark-grey;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    @include breakpoint (large up) {
+      margin-top: 30px;
+      margin-bottom: 30px;  
+    }
+    
+  }
+  a {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: $light-blue;
+  }
+
+  &--mobile {
+    border-bottom: 1px solid $dark-grey;
+    width: 90%;
+    margin: 0 auto;
+
+    @include breakpoint (large up) {
+      display: none;
+    }
+
+    &__slider {
+
+      width: 90%;
+      margin: 0 auto;
+
+      @include breakpoint (large up) {
+        display: none;
+      }
+
+      .details {
+        margin: 10px 0;
+        font-size: 1.1rem;
+        &__name, &__carats, &__mm, &__price {
+          text-align: center;
+          margin: 0 auto;
+        }
+      }
+
+      .gem {
+        margin: 10px 0;
+
+        img {
+          min-height: 80px;
+        }
+      }
+    }
+  }
+
+  &--computer {
+    display: none;
+
+    @include breakpoint (large up) {
+      display: block;
+    }
+
+    &__item {
+      width: 90%;
+      margin: 0 auto;
+      padding: 20px 0;
+      border-bottom: 1px solid $light-grey;
+    }
+  }
+}

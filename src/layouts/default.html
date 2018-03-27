@@ -1,0 +1,261 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PM Gems</title>
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+    <link rel="stylesheet" href="{{root}}assets/css/custom.css">
+  </head>
+  <body>
+    <div class="off-canvas-wrapper">
+
+      <div class="off-canvas position-right" id="mobileMenu" data-off-canvas data-transition="overlap">
+
+        <button class="close-button" aria-label="Close menu" type="button" data-close>
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+        
+        <div class="TopNav--MobileNav">
+        
+          <ul class="vertical menu">
+            <div class="search">
+              <input type="text" class="search" placeholder="Search" />
+            </div>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">My Story</a></li>
+            <li><a href="#">Your Gems</a></li>
+            <li><a href="#">Gem Hunt</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">Testimonials</a></li>
+            <li><a href="#">Contact</a></li>
+            <hr/>
+            <li><a href="#">Shopping Cart</a></li>
+            <li><a href="#">Client Login</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="off-canvas-content" data-off-canvas-content>
+        
+        <div class="TopNav">
+          <div class="row">
+            <div class="small-9 medium-3 columns">
+              <div class="TopNav--Logo">
+                <a href="/"><img src="assets/img/logo_main.png" alt="PM Gems - The Finest Gems From Around The World" /></a>
+              </div>
+            </div>
+            <div class="small-3 medium-9 columns">
+              <div class="TopNav--MainNav">
+                <button class="hamburger hide-for-large" type="button" data-toggle="mobileMenu"></button>
+                
+                <div class="DesktopNav show-for-large">
+                  <div class="top-nav">
+                    <a class="cart" href="#">Shopping cart</a><span class="divider">|</span><a href="#">Client Login</a>
+                    <div class="search">
+                      <input type="text" class="search" placeholder="Search" />
+                    </div>
+                  </div>  
+                
+                  <div class="bottom-nav">
+                    <ul class="menu align-right">
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">My Story</a></li>
+                      <li><a href="#">Your Gems</a></li>
+                      <li><a href="#">Gem Hunt</a></li>
+                      <li><a href="#">Newsletter</a></li>
+                      <li><a href="#">Testimonials</a></li>
+                      <li><a class="last" href="#">Contact</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>  
+
+        <section class="PageContainer">
+
+        {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+        {{> body}}
+
+        </section>
+
+        <section class="QuickSearch">
+          <div class="row small-collapse">
+            <div class="small-12 columns">
+              <div class="QuickSearch--container">
+                <form action="">
+                  <div class="title">Quick Search Tool</div>
+                  <div class="row">
+                    <div class="small-12 medium-6 columns">
+                      <div class="dropdown">
+                        <select>
+                          <option selected value="null">Gemstone</option>
+                          <option>Alexandrite</option>
+                          <option>Amethyst</option>
+                          <option>Aquamarine</option>
+                          <option>Citrine</option>
+                          <option>Emerald</option>
+                          <option>Garnet</option>
+                          <option>Lapis Lazuli</option>
+                          <option>Morganite</option>
+                          <option>Opal</option>
+                          <option>Pearl</option>
+                          <option>Peridot</option>
+                          <option>Ruby</option>
+                          <option>Sapphire</option>
+                          <option>Spinel</option>
+                          <option>Tanzenite</option>
+                          <option>Tourmaline</option>
+                          <option>Topaz</option>
+                          <option>Tsavorite Garnet</option>
+                          <option>Unusual</option>
+                          <option>Zircon</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="small-12 medium-6 columns">
+                      <div class="shape">
+                        <div class="shape_title">
+                          <span>Shape</span>
+                        </div>
+                        <div class="checkboxes">
+                          <input type="checkbox" class="antique_cushion" name="antique_cushion" id="antique_cushion" value="antique_cushion">
+                          <label for="antique_cushion"></label>
+
+                          <input type="checkbox" class="emerald_cut" name="emerald_cut" id="emerald_cut" value="emerald_cut">
+                          <label for="emerald_cut"></label>
+
+                          <input type="checkbox" class="fancy" name="fancy" id="fancy" value="fancy">
+                          <label for="fancy"></label>
+
+                          <input type="checkbox" class="marquise" name="marquise" id="marquise" value="marquise">
+                          <label for="marquise"></label>
+
+                          <input type="checkbox" class="oval" name="oval" id="oval" value="oval">
+                          <label for="oval"></label>
+
+                          <input type="checkbox" class="pear" name="pear" id="pear" value="pear">
+                          <label for="pear"></label>
+
+                          <input type="checkbox" class="princess_cut" name="princess_cut" id="princess_cut" value="princess_cut">
+                          <label for="princess_cut"></label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="small-12 medium-6 columns">
+                      <div class="gem_slider">
+                        <div class="buttons">
+                          <button class="button carat selected">Carat</button> <button class="button carat">MM</button>
+                        </div>
+                        <div id="slider-range_carat"></div>
+                        <div class="values">
+                          <input type="text" id="amount-min-carat" class="amount_left" />
+                          <input type="text" id="amount-max-carat" class="amount_right" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="small-12 medium-6 columns"> 
+                      <div class="gem_slider">
+                        <div class="buttons">
+                          <button class="button selected">Price</button>
+                        </div>
+                        <div id="slider-range_price"></div>
+                        <div class="values">
+                          <input type="text" id="amount-min-price" class="amount_left" />
+                          <input type="text" id="amount-max-price" class="amount_right" />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="small-12 columns">
+                      <div class="submit_button">
+                        <button class="button submit">Submit</button> 
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="PromoSection">
+          <div class="row small-collapse medium-uncollapse">
+            <div class="small-12 columns">
+              <div class="row small-collapse">
+                <div class="small-12 large-5 medium-collapse columns">
+                  <div class="PromoSection--shipping">
+                    <div class="title">Free Worldwide Shipping</div>
+                    <div class="link"><a href="#">Click here</a></div>
+                  </div>
+                </div>
+                <div class="small-12 large-7 medium-collapse columns">
+                  <div class="PromoSection--newsletter">
+                    <div class="icon"><img src="assets/img/icon_newsletter.png" alt="" /></div>
+                    <div class="title">Sign up for our newsletter<br/>Gem and Jewellery News</div>
+                    <input type="text" class="email" placeholder="ENTER YOUR EMAIL" />
+                    <button class="submit">Submit</button> 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row align-middle">
+            <div class="small-12 medium-4 hide-for-small show-for-medium columns">
+              <div class="logo">
+                <a href="/"><img src="assets/img/logo_footer.png" alt="PM Gems" /></a>
+              </div>
+              <div class="copyright">COPYRIGHT &copy; 2017 PM Gems Inc.</div>
+            </div>
+
+            <div class="small-12 medium-4 columns align-middle">
+              <div class="PromoSection--links border">
+                <div class="title">
+                  Contact
+                </div>
+                <ul class="footer_links">
+                  <li>Phone: 1.416.555.1234</li>
+                  <li>Toll Free: 1.800.387.1606</li>
+                  <li>Mail: <a href="mailto:pmgems@rogers.com">pmgems@rogers.com</a></li>
+                </ul>
+              </div>
+              <hr/>
+            </div>
+
+            <div class="small-12 medium-4 columns align-middle">
+              <div class="PromoSection--links border">
+                <ul class="footer_links">
+                  <li><a href="#">Privacy Policy</a></li>
+                  <li><a href="#">Terms of Use</a></li>
+                  <li><a href="#">Shipping Policy</a></li>
+                  <li><a href="#">Return POlicy</a></li>
+                  <li><a href="#">Sitemap</a></li>
+                </ul>
+              </div>
+              <hr/>
+            </div>
+
+            <div class="small-12 medium-4 hide-for-medium columns">
+              <div class="logo">
+                <a href="/"><img src="assets/img/logo_footer.png" alt="PM Gems" /></a>
+              </div>
+              <div class="copyright">COPYRIGHT &copy; 2017 PM Gems Inc.</div>
+            </div>
+
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="{{root}}assets/js/app.js"></script>
+    <!-- <script src="{{root}}assets/js/jquery-ui.min.js"></script>
+    <script src="{{root}}assets/js/jquery.autocomplete.js"></script>
+    <script src="{{root}}assets/js/slick.js"></script> -->
+    <script src="{{root}}assets/js/scripts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+.YourGems {
+  
+  &--left {
+    order: 2;
+
+    @include breakpoint (large up) {
+      order: 1;
+      margin-bottom: 0;
+      border-right: 1px solid $dark-grey;
+      position: relative;
+    }
+  }
+
+  &--right {
+    order: 1;
+
+    @include breakpoint (large up) {
+      order: 2;
+      margin-bottom: 0;
+    }
+  }
+
+  .GemGrid {
+    margin: 0 35px !important;
+  }
+
+}

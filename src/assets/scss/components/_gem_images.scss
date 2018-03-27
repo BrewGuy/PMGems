@@ -1,0 +1,44 @@
+.GemImages {
+  text-transform: uppercase;
+
+  h1 {
+    font-family: $Mont-UltraLight;
+    font-weight: 700;
+    
+    font-size: 2rem;
+    margin: 20px auto;
+    text-align: center;
+  }
+
+  &--gem {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &--slider {
+    width: 265px;
+    margin: 20px auto 0;
+    padding-left: 10px;
+
+    @include breakpoint (medium up) {
+      width: 420px;
+      padding-left: 10px; 
+      
+    }
+
+    img {
+      cursor: pointer;
+    }
+  }
+
+  .slide_count {
+    width: 200px;
+    margin: 20px auto 0;
+    text-align: center;
+  }
+}

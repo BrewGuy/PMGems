@@ -1,0 +1,129 @@
+.MainSlider {
+
+  &--container {
+    display: flex;
+    flex-direction: column;
+
+    @include breakpoint (large) {
+      flex-direction: row;
+      height: 550px;
+    }
+
+    @include breakpoint (xlarge up) {
+      flex-direction: row;
+      height: 650px;
+    }
+
+    .large_section {
+      display: block;
+      order: 2;
+      background-position: top center !important;
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+
+      @include breakpoint (large up) {
+        order: 1;
+        width: 60%;
+        float: left;
+
+        img {
+          display: none;
+        }
+      }
+    }
+
+    .small_section {
+      order: 1;
+
+      background-position: top center !important;
+      background-repeat: no-repeat !important;
+      background-size: cover !important;
+
+      @include breakpoint (large up) {
+        order: 2;
+        width: 40%;
+        float: left;
+        clear: both;
+      }
+      
+      .small_picture {
+        display: none;
+
+        img {
+          width: 100%;
+        }
+
+        @include breakpoint (large up) {
+          display: block;
+          height: 45%;
+        }
+      }
+
+      .text {
+        background: $light-blue;
+        color: white;
+        font-family: $Mont-UltraLight;
+        padding: 20px;
+        height: 55%;
+        overflow-y: auto;
+
+        .title {
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 28px;
+          padding-bottom: 20px;
+          border-bottom: 4px solid $white;
+        }
+
+        .copy {
+          padding-top: 20px;
+
+          p {
+            margin-top: 10px;
+          }
+
+          a {
+            color: $white;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            &:hover {
+              text-decoration: underline;
+            }
+
+          }
+        }
+      }
+
+      @include breakpoint (large up) {
+        display: block;
+      }
+    }
+
+  }
+
+  //Slider
+
+  .slick-dots {
+    bottom: 5px;
+
+    @include breakpoint (large up) {
+      left: -20%;
+    }
+  }
+
+  .slick-dots li button:before {
+    color: $black;
+    opacity: 1;
+    font-size: 1rem;
+    line-height: 14px;
+  }
+
+  .slick-dots li.slick-active button:before {
+    color: $white;
+  }
+
+  .slick-dotted.slick-slider {
+    margin-bottom: 0;
+  }
+}

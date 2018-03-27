@@ -1,0 +1,18 @@
+body {
+  color: $dark-grey;
+  font-family: $Mont-Light;
+  font-size: 16px;
+}
+
+//Quickly fade out placeholder text in inputs
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: opacity 0.1s 0.1s ease; 
+  opacity: 0;
+}
+
+.PageContainer {
+  
+  @include breakpoint (large up) {
+    margin: 40px 0 0;  
+  }
+}

@@ -1,0 +1,73 @@
+.GemDetails {
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px 0 0;
+  
+  @include breakpoint (large up) {
+    width: 80%;
+  }
+
+  hr {
+    height: 1px;
+    background: $dark-grey;
+    width: 100%;
+    margin: 30px auto;
+  }
+
+  table {
+    width: 90%;
+    margin: 0 auto;
+
+    tbody {
+      border: none;
+      tr {
+        td {
+          background: $white;
+          width: 50%;
+          font-size: 0.85rem;
+          vertical-align: top;
+
+          @include breakpoint(medium up) {
+            width: auto;
+            font-size: 1rem;
+          }
+
+          &.category {
+            text-align: right;
+            padding-right: 10px;
+            text-transform: uppercase;
+
+          }
+
+          &.data {
+            text-align: left;
+            padding-left: 10px;
+
+          }
+        }
+      }
+    }
+  }
+
+  &--notes {
+    margin: 10px auto;
+    width: 80%;
+    text-align: center;
+  }
+
+  &--link {
+    width: 280px;
+    display: block;
+    margin: 20px auto;
+    padding: 20px;
+    color: $dark-grey;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid $dark-grey;
+
+    &.red {
+      color: $white;
+      background: $red;
+    }
+  }
+}

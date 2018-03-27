@@ -1,0 +1,199 @@
+.QuickSearch {
+
+  &--container {
+    background: url('../img/bg_quick_search.png') 0 0 repeat-x;
+    background-size: 100% 100%;
+
+    .title {
+      font-family: $Mont-UltraLight;
+      margin: 0 auto;
+      padding: 40px 0 20px;
+      text-align: center;
+      font-size: 32px;
+      text-transform: uppercase;
+      color: $white;
+    }
+
+    .dropdown {
+      margin: 10px auto 0;
+      text-align: center;
+
+      select {
+        background: url('../img/bg_dropdown.png') 0 0 no-repeat;
+        background-size: 100%;
+        width: 300px;
+        height: 35px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $red;
+        border: none;
+
+        option {
+          color: $red;
+        }
+      }  
+    }
+
+    .shape {
+      position: relative;
+      margin: 10px auto;
+      text-align: center;
+      font-weight: 700;
+      background: url('../img/bg_gem_shape.png') 0 0 no-repeat;
+      width: 300px;
+      height: 39px;
+
+      .shape_title {
+        display: inline-block;
+        float: left;
+        color: $red;
+        text-transform: uppercase;
+        border-right: 2px solid $red;
+        margin: 0;
+        padding: 0 15px;
+        height: 39px;
+        span {
+          display: inline-block;
+          position: relative;
+          top: 8px;
+        }
+      }
+
+      .checkboxes {
+        width: 300px;
+        position: absolute;
+        top: 6px;
+        left: 92px;
+        text-align: left;
+
+        input[type=checkbox] {
+          display:none;
+        }
+
+        input[type=checkbox] + label {
+            display:inline-block;
+            margin: 0;
+            padding: 0;
+            background: url("../img/gem_sprite_small.png") no-repeat;
+            height: 25px;
+            width: 25px;
+        }
+
+        input.antique_cushion + label {
+          background-position: -6px -5px;
+        }
+
+        input.antique_cushion:checked + label {
+            background-position: -156px -5px;
+        }
+
+        input.emerald_cut + label {
+          background-position: -6px -5px;
+        }
+
+        input.emerald_cut:checked + label {
+            background-position: -156px -5px;
+        }
+
+        input.fancy + label {
+          background-position: -6px -5px;
+        }
+
+        input.fancy:checked + label {
+            background-position: -156px -5px;
+        }
+
+        input.marquise + label {
+          background-position: -6px -5px;
+        }
+
+        input.marquise:checked + label {
+            background-position: -156px -5px;
+        }
+
+        input.oval + label {
+          background-position: -6px -5px;
+        }
+
+        input.oval:checked + label {
+            background-position: -156px -5px;
+        }
+
+        input.pear + label {
+          background-position: -6px -5px;
+        }
+
+        input.pear:checked + label {
+            background-position: -156px -5px;
+        }
+
+        input.princess_cut + label {
+          background-position: -6px -5px;
+        }
+
+        input.princess_cut:checked + label {
+            background-position: -156px -5px;
+        }
+      }
+
+    }
+
+    .gem_slider {
+      width: 300px;
+      margin: 20px auto;
+      padding: 0;
+      clear: both;
+
+      .values {
+        padding: 10px 0;
+        input {
+          height: 20px;
+          width: 50px;
+          padding: 5px;
+          display: inline;
+          background: $red;
+          border: none;
+          color: $white;
+          font-size: 12px;
+
+          &.amount_left {
+            float: left;
+          }
+
+          &.amount_right {
+            float: right;
+            text-align: right;
+          }
+        }
+      }
+    }
+
+    .submit_button {
+      margin-bottom: 40px;
+    }
+
+    .button {
+      border: 1px solid white;
+      background: linear-gradient($white, $light-grey);
+      color: $red;
+      border-radius: 10px;
+      opacity: 0.6;
+      text-transform: uppercase;
+
+      &:hover, &:focus {
+        background-color: none;
+      }
+
+      &.selected {
+        opacity: 1;
+      }
+
+      &.submit {
+        opacity: 1;
+        padding: 20px 40px;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+}

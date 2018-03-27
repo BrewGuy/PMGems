@@ -1,0 +1,115 @@
+.GemGrid {
+  margin: 40px 20px;
+
+  @include breakpoint (large up) {
+      margin: 40px 20px -40px;
+    }
+
+  &--title {
+    font-family: $Mont-UltraLight;
+    font-size: 26px;
+    font-weight: 700;
+    margin: 20px auto;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &--subtitle {
+    text-align: center;
+  }
+
+  &--mobile {
+    @include breakpoint (medium up) {
+      display: none;
+    }
+
+    .gem {
+      width: 50%;
+      float: left;
+      border-left: none;
+      border-right: 1px solid $light-grey;
+      margin-bottom: 20px;
+
+      @include breakpoint (medium up) {
+        margin-bottom: 40px;
+      }
+
+      &:nth-child(2n) {
+        border-left: 1px solid $light-grey;
+        border-right: none;
+      }
+
+      .image {
+        width: 90%;
+        margin: 0 auto;
+        img {
+          width: 100%;
+          margin: 0 auto;
+          text-align: center;
+        }
+      }
+
+      .text {
+        font-family: $Mont-Regular;
+        font-size: 14px;
+        text-transform: uppercase;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &--computer {
+    display: none;
+    
+     @include breakpoint (medium up) {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      border-spacing: 20px;
+      margin: 40px 0;
+    }
+
+    .gem {
+      width: 25%;
+      margin: 0 0 40px;
+      border-right: 2px solid $light-grey;
+      
+      @include breakpoint (medium down) {
+        &:nth-child(1) {
+          border-left: none;
+        }
+
+        &:nth-child(4n) {
+          border-right: none;
+        }
+      }
+
+      @include breakpoint (large up) {
+        width: 20%;
+
+        &:nth-child(5n) {
+          border-right: none;
+        }
+      }
+
+      .image {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .text {
+        font-family: $Mont-Regular;
+        font-size: 14px;
+        text-transform: uppercase;
+        width: 100%;
+        text-align: center;
+        margin: 10px auto;
+      }
+    }
+
+  }
+
+}

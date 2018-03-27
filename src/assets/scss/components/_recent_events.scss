@@ -1,0 +1,45 @@
+.RecentEvents {
+  width: 90%;
+  margin: 0 auto;
+
+  @include breakpoint (large up) {
+    margin: 0 auto 250px;
+  }
+  
+  h3 {
+    margin: 30px auto 0;
+  }
+
+  &--gem {
+    position: relative;
+    z-index: 5;
+  }
+
+  &--gem_name {
+    font-family: $Mont-Regular;
+    color: $dark-grey;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 10;
+    margin: -10px 0 20px;
+  }
+
+  &--slider {
+    width: 90%;
+    margin: 0 auto 20px;
+    
+    img {
+      cursor: pointer;
+    }
+
+    div {
+      &:active, &:focus {
+        outline: 0;
+        border: none;
+        -moz-outline-style: none;
+      }
+    }
+  }
+}
+

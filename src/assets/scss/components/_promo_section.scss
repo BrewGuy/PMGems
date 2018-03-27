@@ -1,0 +1,222 @@
+.PromoSection {
+  
+  .logo {
+    margin: 40px auto 20px;
+    text-align: center;
+    img {
+      width: 250px;
+    }
+  }
+
+  .copyright {
+    text-align: center;
+    font-size: 12px;
+    margin-bottom: 40px;
+  }
+
+  &--links {
+    margin: 40px auto;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include breakpoint (medium up) {
+      font-size: 14px;
+      height: 150px;
+    }
+
+    &.border {
+      @include breakpoint (medium up) {
+        border-left: 1px solid $dark-grey;
+      }
+    }
+
+    .title {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    ul.footer_links {
+      list-style: none;
+      li {
+        margin-bottom: 10px;
+
+         @include breakpoint (large up) {
+          margin-bottom: 5px;
+        }
+
+
+        a {
+          color: $dark-grey;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+
+          @include breakpoint (large up) {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    img {
+      width: 60%;
+      margin-bottom: 20px;
+    }
+  }
+
+  hr {
+    width: 80%;
+    margin: 20px auto 0;
+
+    @include breakpoint (medium up) {
+      display: none;
+    }
+
+  }
+
+  &--shipping {
+    height: 275px;
+    background: url('../img/bg_plane_mobile.jpg') 0 0 no-repeat;
+    background-size: cover;
+
+    @include breakpoint (large) {
+      background: url('../img/bg_plane.jpg') -160px 0px no-repeat;
+      height: 220px;
+    }
+
+    @include breakpoint (xlarge up) {
+      background: url('../img/bg_plane.jpg') -95px 0px no-repeat;
+      height: 220px;
+    }
+
+
+    .title {
+      width: 300px;
+      margin: 0 auto;
+      padding-top: 50px; 
+      font-size: 46px;
+      line-height: 50px;
+      text-align: center;
+      font-family: $Mont-UltraLight;
+      font-weight: 700;
+      color: $white;
+      text-transform: uppercase;
+
+      @include breakpoint (large up) {
+        padding-top: 35px;
+        font-size: 32px;
+        line-height: 36px;
+        text-align: left;
+        margin-left: 40px;
+      }  
+    }
+
+    .link {
+      margin: 30px auto;
+      text-align: center;
+
+      @include breakpoint (large up) {
+        width: 200px;
+        text-align: left;
+        margin: 20px 0 0 40px;
+      }  
+
+      a {
+        color: $white;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  &--newsletter {
+    height: 380px;
+    background: url('../img/bg_newsletter_mobile.png') top center no-repeat;
+    background-size: cover;
+
+    @include breakpoint (large up) {
+      background: url('../img/bg_newsletter.png') 0 0 no-repeat;
+      height: 220px;
+    }
+
+    .icon {
+      width: 80px;
+      display: block;
+      padding-top: 40px;
+      margin: 0 auto;
+
+      @include breakpoint (large up) {
+        width: 160px;
+        float: left;
+        margin-left: 40px;
+      }
+    }
+
+    .title {
+      margin: 0 auto;
+      padding-top:30px; 
+      text-align: center;
+      font-family: $Mont-Regular;
+      font-size: 18px;
+      line-height: 24px;
+      color: $white;
+      text-transform: uppercase;
+
+      @include breakpoint (large up) {
+        text-align: left;
+        float: left;
+        margin-top: 20px;
+        font-size: 22px;
+        line-height: 28px;
+      }
+    }
+
+    input.email {
+      width: 65%;
+      margin: 20px auto;
+      background-color: rgba(0,0,0,0.01);
+      color: $white;
+      border: 1px solid $white;
+      
+      @include breakpoint (large up) {
+        float: left;
+        width: 45%;
+      }
+
+      &:focus {
+        color: $dark-grey;
+      }
+
+      &::placeholder {
+        text-align: center;
+        color: $white;
+
+        @include breakpoint (large up) {
+          text-align: left;
+        }
+      }
+    } 
+
+    button.submit {
+      width:30%;
+      display: block;
+      margin: 40px auto 0;
+
+      padding: 10px 20px;
+      background-color: rgba(0,0,0,0.01);
+      color: $white;
+      border: 1px solid $white;
+
+      @include breakpoint (large up) {
+        float: left;
+        width: 100px;
+        margin: 20px 0 0 20px;
+      }
+
+    }
+  }
+}
